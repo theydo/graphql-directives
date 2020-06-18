@@ -3,7 +3,7 @@ import { SchemaDirectiveVisitor } from 'graphql-tools'
 import { AuthenticationError } from 'apollo-server-errors'
 
 export interface RequiresAuthenticationOptions<Context extends any> {
-  isAuthenticated: (context: Context) => boolean
+  isAuthenticated: (context: Context) => boolean | Promise<boolean>
   throwError?: Error
 }
 
