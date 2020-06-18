@@ -1,0 +1,26 @@
+{
+	"name": "@theydo/graphql-directives",
+	"description": "GraphQL directives",
+	"private": true,
+	"workspaces": [
+		"packages/*"
+	],
+	"author": "Kees van Lierop <kees@theydo.io>",
+	"license": "MIT",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/keesvanlierop/graphql-directives"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
+	"devDependencies": {
+		"@typescript-eslint/eslint-plugin": "^3.3.0",
+		"@typescript-eslint/parser": "^3.3.0",
+		"eslint": "^7.2.0",
+		"eslint-config-prettier": "^6.11.0",
+		"eslint-plugin-prettier": "^3.1.4",
+		"prettier": "^2.0.5",
+		"typescript": "^3.9.5"
+	}
+}

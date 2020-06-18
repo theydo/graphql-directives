@@ -1,0 +1,39 @@
+{
+    "name": "@theydo/graphql-directive-requires-authentication",
+    "version": "0.0.1",
+    "description": "GraphQL directive for checking authentication through context",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+		"prepare": "yarn build",
+		"prepublishOnly": "yarn lint",
+		"preversion": "yarn lint",
+		"version": "yarn format && git add -A src",
+		"postversion": "git push && git push --tags",
+		"build": "tsc",
+		"format": "yarn lint 'src/**/*.ts' --quiet --fix",
+		"lint": "eslint"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/keesvanlierop/graphql-directives/tree/master/packages/apollo-server-core"
+    },
+    "keywords": [
+        "GraphQL",
+        "Apollo",
+        "Server",
+        "TypeScript"
+    ],
+    "author": "Kees van Lierop <kees@theydo.io>",
+    "license": "MIT",
+        "bugs": {
+        "url": "https://github.com/keesvanlierop/graphql-directives/issues"
+    },
+    "dependencies": {
+        "apollo-server-errors": "^2.4.1",
+        "graphql-tools": "^6.0.10"
+    },
+    "peerDependencies": {
+        "graphql": "^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0"
+    }
+}
