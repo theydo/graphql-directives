@@ -1,6 +1,6 @@
 {
   "name": "@theydo/graphql-directive-requires-authentication",
-  "version": "0.1.0",
+  "version": "0.0.9",
   "description": "GraphQL directive for checking authentication through context",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "apollo-server-errors": "^2.4.1",
-    "graphql-tools": "^6.0.10",
-    "graphql": "^14.6.0"
+    "graphql-tools": "^4.0.6",
+    "graphql": "^14.5.8"
   }
 }
