@@ -13,7 +13,9 @@ export interface RequiresAuthenticationOptions<Context extends any> {
   throwError?: Error
 }
 
-export default function <T extends any>(options: RequiresAuthenticationOptions<T>) {
+export default function <T extends any>(
+  options: RequiresAuthenticationOptions<T>,
+): typeof SchemaDirectiveVisitor {
   const error = options.throwError || new AuthenticationError('Invalid authentication')
 
   return class RequiresAuthentication extends SchemaDirectiveVisitor {
