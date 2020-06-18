@@ -1,4 +1,4 @@
-# @theydo/graphql-directive-requires-authentication
+# GraphQL Directive: @requiresAuthentication
 
 This directive will throw an AuthenticationError if the context of the query operation
 that implements this directive does not meet the criteria of "being authenticated".
