@@ -5,7 +5,7 @@ that implements this directive does not meet the criteria of "being authenticate
 
 ## Usage
 
-To use the directive, you should start by adding the directive to your GraphQL schema SDL:
+To use the directive, you should start by adding the directive to your GraphQL schema:
 
 ```graphql
 @directive requiresAuthentication on FIELD_DEFINITION
