@@ -1,6 +1,6 @@
 {
   "name": "@theydo/graphql-directive-requires-authentication",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "GraphQL directive for checking authentication through context",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -16,7 +16,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/keesvanlierop/graphql-directives/tree/master/packages/graphql-directive-requires-authentication"
+    "url": "https://github.com/theydo/graphql-directives/tree/master/packages/graphql-directive-requires-authentication"
   },
   "keywords": [
     "GraphQL",
@@ -27,7 +27,7 @@
   "author": "Kees van Lierop <kees@theydo.io>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/keesvanlierop/graphql-directives/issues"
+    "url": "https://github.com/theydo/graphql-directives/issues"
   },
   "publishConfig": {
     "access": "public"
