@@ -28,8 +28,8 @@ export default function <T extends any>(
     visitFieldDefinition(field: GraphQLField<any, any>) {
       const { resolve = defaultFieldResolver } = field
 
-      field.resolve = (...args) => {
-        this.resolver(...args)
+      field.resolve = async (...args) => {
+        await this.resolver(...args)
         return resolve.call(this, ...args)
       }
     }
