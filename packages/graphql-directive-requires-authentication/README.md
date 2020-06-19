@@ -1,7 +1,12 @@
 # GraphQL Directive: @requiresAuthentication
 
-This directive will throw an AuthenticationError if the context of the query operation
-that implements this directive does not meet the criteria of "being authenticated".
+The point of this directive is not to validate JWT tokens, since this is frequently
+a project-specific implementation. Instead it is expected that resolving token status
+is done in the Apollo getContext hook, where the validated token is used to extend
+the context object (user information).
+
+This directive will only assert the "isAuthenticated" status coming from the context
+object.
 
 ## Usage
 
