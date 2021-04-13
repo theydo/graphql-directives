@@ -10,7 +10,7 @@ import { AuthenticationError } from 'apollo-server-errors'
 
 export interface RequiresAuthenticationOptions<Context extends any> {
   isAuthenticated: (context: Context) => boolean | Promise<boolean>
-  throwError?: Error
+  throwError?: ((context: Context) => Error) | Error
 }
 
 export default function <T extends any>(
@@ -21,6 +21,7 @@ export default function <T extends any>(
   return class RequiresAuthentication extends SchemaDirectiveVisitor {
     resolver: GraphQLFieldResolver<any, T> = async (_, _args, context) => {
       if (!(await options.isAuthenticated(context))) {
+        const formattedError = typeof error === 'function' ? error(context) : error
         throw error
       }
     }
