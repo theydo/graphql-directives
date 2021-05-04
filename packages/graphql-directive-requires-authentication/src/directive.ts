@@ -22,7 +22,7 @@ export default function <T extends any>(
     resolver: GraphQLFieldResolver<any, T> = async (_, _args, context) => {
       if (!(await options.isAuthenticated(context))) {
         const formattedError = typeof error === 'function' ? error(context) : error
-        throw error
+        throw formattedError
       }
     }
 
